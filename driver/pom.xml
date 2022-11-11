@@ -211,6 +211,23 @@
       </exclusions>
     </dependency>
 
+    <!-- IAM unit tests only - Bouncycastle has changed
+         the packaging since 1.69, classes needed by test
+         have been moved to bcutil-jdk15on.
+    -->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcutil-jdk15on</artifactId>
+      <version>${bouncy.version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
     <!-- test -->
     <dependency>
       <groupId>junit</groupId>

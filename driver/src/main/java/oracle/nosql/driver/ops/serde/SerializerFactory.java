@@ -41,6 +41,10 @@ public interface SerializerFactory {
 
     Serializer createMultiDeleteSerializer();
 
+    Serializer createAddReplicaSerializer();
+
+    Serializer createDropReplicaSerializer();
+
     /* deserializers */
     Serializer createDeleteDeserializer();
 
@@ -70,4 +74,7 @@ public interface SerializerFactory {
 
     Serializer createMultiDeleteDeserializer();
 
+    Serializer createAddReplicaDeserializer();
+
+    Serializer createDropReplicaDeserializer();
 }
